@@ -1,5 +1,5 @@
 # updater
-Pluck upater module
+Pluck updater module
 
 
 Updater module for Pluck which needs write access to the whole site, when it has write access it can update the whole site in place without  disturbing the custom files.
