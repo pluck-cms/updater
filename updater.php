@@ -6,7 +6,7 @@ function updater_info() {
 		'name'          => $lang['updater']['name'],
 		'intro'         => $lang['updater']['intro'],
 		'version'       => '0.1',
-		'author'        => $lang['updater']['author'],
+		'author'        => 'Bas Steelooper',
 		'website'       => 'http://xobit.nl',
 		'icon'          => 'images/style-edit.png',
 		'compatibility' => '4.7'
