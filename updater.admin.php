@@ -41,6 +41,7 @@ function updater_page_admin_Main() {
 
 	showmenudiv($lang['updater']['requirements'],$lang['updater']['requirements_info'],'data/modules/updater/images/requirements.jpg','admin.php?module=updater&page=REQ',false);
 	showmenudiv($lang['updater']['backup'],$lang['updater']['backup_info'],'data/modules/updater/images/backup.png','admin.php?module=updater&page=BACKUP',false);
+	showmenudiv($lang['updater']['backupfiles'],$lang['updater']['backupfiles_info'],'data/image/file.png','admin.php?action=files',false);
 	showmenudiv($lang['updater']['available'],$lang['updater']['available_info'],'data/modules/updater/images/check.png','admin.php?module=updater&page=AVAIL',false);
 	showmenudiv($lang['updater']['update'],$lang['updater']['update_info'],'data/modules/updater/images/update.jpg','admin.php?module=updater&page=UPDATE',false);
 }

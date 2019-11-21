@@ -21,3 +21,7 @@ $lang['updater']['curl_installed'] = "Curl is available to do the downloads";
 $lang['updater']['curl_notinstalled'] = "Curl is not available the updater cannot continue";
 $lang['updater']['backupcreated'] = "The backup has been created";
 $lang['updater']['not_needed'] = "Update is not needed.";
+
+$lang['updater']['backupfiles'] = 'Location of the Backup files';
+$lang['updater']['backupfiles_info'] = 'View the backupfiles in the Files folder';
+
