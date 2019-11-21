@@ -8,7 +8,7 @@ function updater_info() {
 		'version'       => '0.1',
 		'author'        => $lang['updater']['author'],
 		'website'       => 'http://xobit.nl',
-		'icon'          => 'images/style-edit.png',
+		'icon'          => 'images/update.jpg',
 		'compatibility' => '4.7'
 	);
 	return $module_info;
