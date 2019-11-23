@@ -48,7 +48,9 @@ function updater_page_admin_Main() {
 
 function updater_page_admin_REQ() {
 	global $lang;
-	echo "<p><a href=\"?module=updater\"><<< Back</a></p>";
+	?>
+	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
+	<?php
 
 	//do requirements check here
 
@@ -83,12 +85,16 @@ function updater_page_admin_REQ() {
 	}
 	print("	<br /> <b>Checks Complete </b><br /><br />");
 
-	echo "<p><a href=\"?module=updater\"><<< Back</a></p>";
+	?>
+	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
+	<?php
 }
  
 function updater_page_admin_BACKUP() {
 	global $lang;
-	echo "<p><a href=\"?module=updater\"><<< Back</a></p>";
+	?>
+	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
+	<?php
 
 	$backupfile = createSiteBackup();
 
@@ -96,13 +102,17 @@ function updater_page_admin_BACKUP() {
 
 	print("<a href=".$backupfile.">Download backup here</a>");
 
-	echo "<p><a href=\"?module=updater\"><<< Back</a></p>";
+	?>
+	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
+	<?php
 
 }
 
 function updater_page_admin_AVAIL() {
 	global $lang;
-	echo "<p><a href=\"?module=updater\"><<< Back</a></p>";
+	?>
+	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
+	<?php
 
 	if (extension_loaded('curl')){
 		//installed
@@ -125,12 +135,16 @@ function updater_page_admin_AVAIL() {
 	
 	}
 
-	echo "<p><a href=\"?module=updater\"><<< Back</a></p>";
+	?>
+	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
+	<?php
 }
  
 function updater_page_admin_UPDATE() {
 	global $lang;
-	echo "<p><a href=\"?module=updater\"><<< Back</a></p>";
+	?>
+	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
+	<?php
 
 	//do update here
 	//Backup install to /files
@@ -173,7 +187,9 @@ function updater_page_admin_UPDATE() {
 
 	rrmdir($tmp_name_folder);
 
-	echo "<p><a href=\"?module=updater\"><<< Back</a></p>";
+	?>
+	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
+	<?php
 }
 
 function createSiteBackup(){
