@@ -11,8 +11,8 @@ $lang['updater']['requirements'] = 'Sprawdź wymagania';
 $lang['updater']['available'] = 'Sprawdź dostępne aktualizacje';
 $lang['updater']['backup'] = 'Utwórz kopię zapasową witryny';
 $lang['updater']['update'] = 'Zaktualizuj do najnowszej wersji';
-$lang['updater']['requirements_info'] = 'Sprawdzi instalację, czy aktualizacja może być uruchomiona.';
-$lang['updater']['available_info'] = 'Sprawdzi, czy aktualizacja jest dostępna';
+$lang['updater']['requirements_info'] = 'Sprawdź instalację, czy aktualizacja może być uruchomiona.';
+$lang['updater']['available_info'] = 'Sprawdź, czy aktualizacja jest dostępna';
 $lang['updater']['backup_info'] = 'Utwórz kopię zapasową strony internetowej w folderze plików';
 $lang['updater']['update_info'] = 'Zaktualizuje Plucka do najnowszej wersji';
 $lang['updater']['yes'] = "Istnieje nowsza wersja Plucka";
@@ -25,3 +25,8 @@ $lang['updater']['not_needed'] = "Aktualizacja nie jest potrzebna.";
 
 $lang['updater']['backupfiles'] = 'Lokalizacja plików kopii zapasowej';
 $lang['updater']['backupfiles_info'] = 'Wyświetl pliki kopii zapasowej w folderze Pliki';
+$lang['updater']['download_backup'] = 'Pobierz kopię zapasową tutaj';
+
+$lang['updater']['check_folders'] = 'Sprawdzam katalogi';
+$lang['updater']['check_plugins'] = 'Sprawdzam pluginy';
+$lang['updater']['checks_complete'] = 'Sprawdzanie zakończone';

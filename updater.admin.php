@@ -55,11 +55,11 @@ function updater_page_admin_REQ() {
 	//do requirements check here
 
 	//check writable: data, files
-	print("<b>Check folders</b> <br />");
+	echo '<b>'.$lang['updater']['check_folders'].'</b><br />';
 	foreach (array('files', 'data', 'images', 'docs', 'data/inc', 'data/modules', 'data/trash', 'data/themes', 'data/themes/default', 'data/themes/oldstyle', 'data/settings', 'data/settings/langpref.php') as $check)
 		check_writable($check);
 	unset($check);
-	print("	<br /><b> Check plugins </b><br />");
+	echo '<br /><b>'.$lang['updater']['check_plugins'].'</b><br />';
 
 	//check availability libcurl
 	if (extension_loaded('curl')){
@@ -68,7 +68,7 @@ function updater_page_admin_REQ() {
 		<span>
 			<img src="data/image/update-no.png" width="15" height="15" alt="<?php echo $lang['install']['good']; ?>" />
 		</span>
-		<span>&nbsp;/<?php echo $lang['updater']['curl_installed']; ?></span>
+		<span>&nbsp;<?php echo $lang['updater']['curl_installed']; ?></span>
 		<br />
 		<?php
 	
@@ -83,7 +83,7 @@ function updater_page_admin_REQ() {
 		<?php
 	
 	}
-	print("	<br /> <b>Checks Complete </b><br /><br />");
+	echo '<br /><b>'.$lang['updater']['checks_complete'].'</b><br /><br />';
 
 	?>
 	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
@@ -100,8 +100,7 @@ function updater_page_admin_BACKUP() {
 
 	show_error($lang['updater']['backupcreated'],3);
 
-	print("<a href=".$backupfile.">Download backup here</a>");
-
+	echo '<a href='.$backupfile.'>'.$lang['updater']['download_backup'].'</a>';
 	?>
 	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
 	<?php
