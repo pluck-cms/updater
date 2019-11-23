@@ -23,5 +23,4 @@ $lang['updater']['backupcreated'] = "The backup has been created";
 $lang['updater']['not_needed'] = "Update is not needed.";
 
 $lang['updater']['backupfiles'] = 'Location of the Backup files';
-$lang['updater']['backupfiles_info'] = 'View the backupfiles in the Files folder';
-
+$lang['updater']['backupfiles_info'] = 'View the backup files in the Files folder';

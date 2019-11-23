@@ -22,3 +22,6 @@ $lang['updater']['curl_installed'] = "Curl jest dostępny do pobierania";
 $lang['updater']['curl_notinstalled'] = "Curl nie jest dostępny, narzędzie aktualizacji nie może kontynuować";
 $lang['updater']['backupcreated'] = "Kopia zapasowa została utworzona";
 $lang['updater']['not_needed'] = "Aktualizacja nie jest potrzebna.";
+
+$lang['updater']['backupfiles'] = 'Lokalizacja plików kopii zapasowej';
+$lang['updater']['backupfiles_info'] = 'Wyświetl pliki kopii zapasowej w folderze Pliki';
