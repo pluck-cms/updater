@@ -195,8 +195,10 @@ function createSiteBackup(){
 	global $lang;
 	try
 	{
-		$date = date("Y-M-d");
+		$date = date("Y-M-d-H-i-s");
+		
 		$tarfilename = 'files/website-backup-'.$date.'.tar';
+		
 		$a = new PharData($tarfilename);
 
 		// ADD FILES TO archive.tar FILE
@@ -207,6 +209,7 @@ function createSiteBackup(){
 
 		// NOTE THAT BOTH FILES WILL EXISTS. SO IF YOU WANT YOU CAN UNLINK archive.tar
 		unlink($tarfilename);
+
 	} 
 	catch (Exception $e) 
 	{
