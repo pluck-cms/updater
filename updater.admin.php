@@ -144,10 +144,7 @@ function updater_page_admin_UPDATE() {
 	?>
 	<p><a href="?module=updater">&lt;&lt;&lt; <?php echo $lang['general']['back']; ?></a></p>
 	<?php
-
 	//do update here
-	//Backup install to /files
-	createSiteBackup();
 
 	$updateversion = checkUpdate();
 	switch(check_update_version($updateversion)) {
@@ -155,6 +152,8 @@ function updater_page_admin_UPDATE() {
 		show_error($lang['updater']['not_needed'],3);
 		return;
 	}
+	//Backup install to /files
+		createSiteBackup();
 
 	//Download latest version
 
