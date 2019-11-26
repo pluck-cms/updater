@@ -66,7 +66,7 @@ function updater_page_admin_REQ() {
 		//installed
 		?>
 		<span>
-			<img src="data/image/update-no.png" width="15" height="15" alt="<?php echo $lang['install']['good']; ?>" />
+			<img src="data/image/update-no.png" width="15" height="15" alt="" />
 		</span>
 		<span>&nbsp;<?php echo $lang['updater']['curl_installed']; ?></span>
 		<br />
@@ -76,7 +76,7 @@ function updater_page_admin_REQ() {
 		//not installed
 		?>
 		<span>
-			<img src="data/image/error.png" width="15" height="15" alt="<?php echo $lang['install']['false']; ?>" />
+			<img src="data/image/error.png" width="15" height="15" alt="" />
 		</span>
 		<span>&nbsp;<?php echo $lang['updater']['curl_notinstalled']; ?></span>
 		<br /> 
