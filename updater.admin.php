@@ -225,7 +225,7 @@ function checkUpdate(){
 		$geturl = curl_init();
 		curl_setopt($geturl, CURLOPT_URL, $url);
 		// Dont check ssl certifical
-		curl_setopt($geturl, CURLOPT_SSL_VERIFYPEER, false);
+		//curl_setopt($geturl, CURLOPT_SSL_VERIFYPEER, false);
 		// Go redirect
 		curl_setopt($geturl, CURLOPT_FOLLOWLOCATION, true);
 		// Return data
