@@ -224,7 +224,7 @@ function checkUpdate(){
 		// Initialize session and set URL.
 		$geturl = curl_init();
 		curl_setopt($geturl, CURLOPT_URL, $url);
-		// Dont check ssl certifical
+		// Dont check ssl certifical issue #4
 		//curl_setopt($geturl, CURLOPT_SSL_VERIFYPEER, false);
 		// Go redirect
 		curl_setopt($geturl, CURLOPT_FOLLOWLOCATION, true);
