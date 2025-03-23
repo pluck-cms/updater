@@ -167,11 +167,7 @@ function updater_page_admin_UPDATE() {
 
 	// decompress from gz
 	$p = new PharData($tmp_name);
-	$exts = explode('.', $tmp_name);
-	array_shift($exts);
-	array_pop($exts);
-	$ext = implode('.', $exts);
-	$p->decompress($ext);
+	$p->decompress();
 	// unarchive from the tar
 	$phar = new PharData($tmp_name_tar);
 	$phar->extractTo('files');
