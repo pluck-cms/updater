@@ -245,7 +245,6 @@ function checkUpdate(){
 		// Get the last segment
 		$lastPart = end($segments);
 
-		echo $lastPart; // Output: resource
 		curl_close($geturl);
 
 		return $lastPart;
