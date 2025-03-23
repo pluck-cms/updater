@@ -224,8 +224,8 @@ function checkUpdate(){
 		// Initialize session and set URL.
 		$geturl = curl_init();
 		curl_setopt($geturl, CURLOPT_URL, $url);
-		// Dont check ssl certifical issue #4
-		//curl_setopt($geturl, CURLOPT_SSL_VERIFYPEER, false);
+		// Dont check ssl certifical
+		curl_setopt($geturl, CURLOPT_SSL_VERIFYPEER, false);
 		// Go redirect
 		curl_setopt($geturl, CURLOPT_FOLLOWLOCATION, true);
 		// Return data
@@ -233,20 +233,35 @@ function checkUpdate(){
 			
 		// Get the response and close the channel.
 		$response = curl_exec($geturl);
-		curl_close($geturl);
-		// Find latest release
-		//            <span class\=\"css-truncate-target\" style="max-width: 125px">4.7.11</span>
-		preg_match('/\<span class\=\"css-truncate-target\" style\=\"max-width: 125px\"\>(.*)\<\/span\>/', $response, $match);
-		// Current latest release string
-		$update_available = strip_tags($match[0]);
-	
-		// Remove v char if we are using normal releases
-		$update_available = str_replace('v', '', $update_available);
 		
+		$finalurl = curl_getinfo($geturl, CURLINFO_EFFECTIVE_URL);
 
-		return $update_available;
+		// Parse the URL to get the path
+		$path = parse_url($finalurl, PHP_URL_PATH);
+
+		// Split the path into segments
+		$segments = explode('/', rtrim($path, '/'));
+
+		// Get the last segment
+		$lastPart = end($segments);
+
+		echo $lastPart; // Output: resource
+		curl_close($geturl);
+
+		return $lastPart;
 
 }
+   // Function to remove folders and files 
+   function rrmdir($dir) {
+	if (is_dir($dir)) {
+		$files = scandir($dir);
+		foreach ($files as $file)
+			if ($file != "." && $file != "..") rrmdir("$dir/$file");
+		rmdir($dir);
+	}
+	else if (file_exists($dir)) unlink($dir);
+}
+
 
 
    // Function to remove folders and files 
